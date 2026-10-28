@@ -1,0 +1,24 @@
+# Local environment & secrets
+.env
+.env.*
+!.env.example
+
+# Large binary model checkpoints & test audio
+*.nemo
+*.bin
+*.pt
+*.onnx
+*.wav
+*.mp3
+*.flac
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+.venv/

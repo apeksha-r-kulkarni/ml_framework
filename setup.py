@@ -1,0 +1,35 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="ml-framework",
+    version="0.1.0",
+    description="Independent, reusable ML execution framework for model loading, inference, and lifecycle management",
+    author="Shyena ML Team",
+    author_email="apeksha.kulkarni@shyena.in",
+    url="https://gitlab.example.com/shyena/ml_framework",
+    package_dir={"": "src"},
+    packages=find_packages(where="src"),
+    python_requires=">=3.9",
+    install_requires=[],
+    extras_require={
+        "storage": ["boto3>=1.26.0"],
+        "kafka": ["confluent-kafka>=2.0.0"],
+        "connectors": ["boto3>=1.26.0", "confluent-kafka>=2.0.0"],
+        "spacy": ["spacy>=3.5.0"],
+        "transformers": ["transformers>=4.30.0", "torch>=2.0.0"],
+        "onnx": ["onnxruntime>=1.16.0", "optimum>=1.16.0"],
+        "speech": ["transformers>=4.30.0", "torch>=2.0.0", "soundfile>=0.12.0", "numpy>=1.22.0"],
+        "dev": ["pytest>=7.0.0"],
+        "all": [
+            "boto3>=1.26.0",
+            "confluent-kafka>=2.0.0",
+            "spacy>=3.5.0",
+            "transformers>=4.30.0",
+            "torch>=2.0.0",
+            "onnxruntime>=1.16.0",
+            "optimum>=1.16.0",
+            "soundfile>=0.12.0",
+            "numpy>=1.22.0",
+        ],
+    },
+)

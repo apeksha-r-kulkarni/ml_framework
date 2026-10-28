@@ -1,0 +1,9 @@
+model_id,model_bucket,model_key,input_bucket,input_key,task,input_type
+nemo_conformer_ctc,speech-data,model/Transcription/nemo_conformer_ctc,speech-data,audio /chunk_005.mp3,transcription,audio
+wav2vec2_large_960h,speech-data,model/Transcription/wav2vec2_large_960h,speech-data,audio /chunk_010.mp3,transcription,audio
+faster_whisper_large_v3,speech-data,model/Transcription/faster_whisper_large_v3,speech-data,audio /chunk_015.mp3,transcription,audio
+whisper_base,speech-data,model/Transcription/whisper_base,speech-data,audio /chunk_020.mp3,transcription,audio
+whisper_medium,speech-data,model/Transcription/whisper_medium,speech-data,audio /chunk_023.mp3,transcription,audio
+whisper_small,speech-data,model/Transcription/whisper_small,speech-data,audio /chunk_025.mp3,transcription,audio
+whisper_tiny,speech-data,model/Transcription/whisper_tiny,speech-data,audio /chunk_030.mp3,transcription,audio
+DeepFilterNet3,speech-data,model/Denoiser/DeepFilterNet3,speech-data,audio /chunk_035.mp3,denoising,audio

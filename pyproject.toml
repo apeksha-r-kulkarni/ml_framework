@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ml-framework"
+version = "0.1.0"
+description = "Independent, reusable ML execution framework for model loading, inference, and lifecycle management"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Proprietary" }
+authors = [
+    { name = "Shyena ML Team", email = "apeksha.kulkarni@shyena.in" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+storage = [
+    "boto3>=1.26.0",
+]
+kafka = [
+    "confluent-kafka>=2.0.0",
+]
+connectors = [
+    "boto3>=1.26.0",
+    "confluent-kafka>=2.0.0",
+]
+spacy = [
+    "spacy>=3.5.0",
+]
+transformers = [
+    "transformers>=4.30.0",
+    "torch>=2.0.0",
+]
+onnx = [
+    "onnxruntime>=1.16.0",
+    "optimum>=1.16.0",
+]
+speech = [
+    "transformers>=4.30.0",
+    "torch>=2.0.0",
+    "soundfile>=0.12.0",
+    "numpy>=1.22.0",
+]
+dev = [
+    "pytest>=7.0.0",
+]
+all = [
+    "boto3>=1.26.0",
+    "confluent-kafka>=2.0.0",
+    "spacy>=3.5.0",
+    "transformers>=4.30.0",
+    "torch>=2.0.0",
+    "onnxruntime>=1.16.0",
+    "optimum>=1.16.0",
+    "soundfile>=0.12.0",
+    "numpy>=1.22.0",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
